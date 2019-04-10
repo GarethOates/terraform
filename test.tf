@@ -144,3 +144,7 @@ resource "azurerm_virtual_machine" "myterraformvm" {
         environment = "Terraform Demo"
     }
 }
+
+output "ip" {
+    value = "${azurerm_public_ip.myterraformpublicip.ip_address}"
+}
